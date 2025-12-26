@@ -34,6 +34,6 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           gh release create "v${{ steps.pkg.outputs.version }}" \
-            "${{ steps.pkg.outputs.name }}-${{ steps.pkg.outputs.version }}.vsix" \
+            "${{ steps.pkg.outputs.name }}.vsix" \
             --title "v${{ steps.pkg.outputs.version }}" \
             --verify-tag=false
