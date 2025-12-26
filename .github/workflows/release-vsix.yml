@@ -23,7 +23,7 @@ jobs:
       - name: Read package metadata
         id: pkg
         run: |
-          echo "name=$(node -p \"require('./package.json').name\")" >> "$GITHUB_OUTPUT"
+          echo "name=$(jq -r '.name' package.json)" >> "$GITHUB_OUTPUT"
           echo "version=${GITHUB_SHA::7}" >> "$GITHUB_OUTPUT"
 
       - name: Package VSIX
