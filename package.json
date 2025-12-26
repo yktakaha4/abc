@@ -2,7 +2,7 @@
 	"name": "abc-tools",
 	"displayName": "ABC Tools",
 	"description": "Preview and play ABC files in Visual Studio Code",
-	"version": "0.2.4",
+	"version": "0.0.1",
 	"license": "SEE LICENSE IN LICENSE.md",
 	"publisher": "ishiharaf",
 	"author": {
@@ -25,6 +25,11 @@
 		"vscode": "^1.76.0"
 	},
 	"main": "src/extension.js",
+	"activationEvents": [
+		"onLanguage:abc",
+		"onCommand:abc.exportMidi",
+		"onCommand:abc.showPreview"
+	],
 	"contributes": {
 		"languages": [
 			{
