@@ -27,7 +27,7 @@ jobs:
           echo "version=${GITHUB_SHA::7}" >> "$GITHUB_OUTPUT"
 
       - name: Package VSIX
-        run: npx --yes vsce package --out ${{ steps.pkg.outputs.name }}-${{ steps.pkg.outputs.version }}.vsix
+        run: npx --yes vsce package --out ${{ steps.pkg.outputs.name }}.vsix
 
       - name: Create GitHub release
         env:
